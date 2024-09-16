@@ -26,9 +26,7 @@
     <link rel="stylesheet" href="css/validacao-contato.css">
     <script>src="scripts/contato.js"</script>
     <?php endif ?>
-    <?php else:?>
-      <link rel="stylesheet" href="css/paginas.css">
-      <!-- parou aq -->
+    
 
       
   <script src="scripts/header.js" defer></script>
