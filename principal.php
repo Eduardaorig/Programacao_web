@@ -21,13 +21,23 @@
       </div>
       <aside class="sidebar">
         <div class="sidebarContent">
-          <div class="IMC">
+          <form action="#" method="post">
+            <div class="IMC">
             <p>INDICE DE MASSA CORPORAL (IMC)</p>
+            <label for="#nome">Nome (KG)</label>
+            <input id="nome" name="nome" type="text" placeholder="Digite o seu nome">
+            <label for="#email">email (KG)</label>
+            <input id="email" name="email" type="text" placeholder="Digite o seu e-mail">
             <label for="#peso">Peso (KG)</label>
-            <input id="peso" type="text" placeholder="Digite o peso...">
+            <input id="peso" name= "peso" type="text" placeholder="Digite o peso...">
             <label for="#altura">Altura (M)</label>
-            <input id="altura" type="text" placeholder="Digite a altura...">
-            <button class="btnCalcular">Calcular</button>
+            <input id="altura" name= "altura" type="text" placeholder="Digite a altura...">
+            <button type= "submit" class="btnCalcular">Calcular</button>
+          </form>
+          <h4>
+          Resultado: <?= $resposta;?> <br/> 
+          Classificação: <?= $classificacao;?>
+        </h4>
       </aside>
 
     </section>
