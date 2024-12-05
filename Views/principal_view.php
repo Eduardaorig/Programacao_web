@@ -31,7 +31,7 @@
           <div class="categoryCard">
             <img src="<?=$noticia['img']?>" alt="mainCardImg" class="mainCardImg" width=320px height=180px>
             <p class="mainCategoryCardTitle"><?=$noticia['titulo']?></p>
-            <p class="mainCategoryCardDescription"><?= reduzirStr($noticia['descricao'],180)?></p>
+            <p class="mainCategoryCardDescription"><?= reduzirStr($noticia['descricao'],170)?></p>
           </div>
         </a>
         <?php endforeach?>
@@ -42,9 +42,9 @@
           <div class="IMC">
           <form method="POST" action="#">
             <p>INDICE DE MASSA CORPORAL (IMC)</p>
-            <label for="#nome">Nome (KG)</label>
+            <label for="#nome">Nome </label>
             <input id="nome" name="nome" type="text" placeholder="Digite o seu nome">
-            <label for="#email">email (KG)</label>
+            <label for="#email">Email</label>
             <input id="email" name="email" type="text" placeholder="Digite o seu e-mail">
             <label for="#peso">Peso (KG)</label>
             <input id="peso" name="peso" type="text" placeholder="Digite o peso...">

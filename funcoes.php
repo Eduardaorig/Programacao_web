@@ -72,44 +72,6 @@ function reduzirStr($str,$quantidade){
             }
   }
 
-  /**
-   * CriarLista
-   * Popula as informações exibidas na tela principal
-   */
-  function criarLista(){
-      $listaNoticia[0] = array(
-          "titulo" => "BOXE",
-          "descricao" => "O boxe é um esporte de combate que envolve o uso dos punhos para atacar e se defender. Tem origens antigas, remontando a civilizações como os sumérios e egípcios, mas sua forma moderna se desenvolveu no século XVIII na Inglaterra. O esporte se popularizou ao redor do mundo e é caracterizado pela sua combinação de técnica, força física, estratégia e condicionamento. Os competidores, chamados de pugilistas ou boxeadores, enfrentam-se em um ringue dividido em quadrados e delimitado por cordas. As lutas são divididas em rounds, com duração específica, e são supervisionadas por um árbitro. O objetivo é acertar o oponente com golpes limpos e válidos, enquanto se esquiva e se defende dos ataques recebidos. O boxe moderno é categorizado em diversas classes de peso, desde pesos mosca até pesos pesados, o que permite a participação de atletas de diferentes estaturas e pesos. Existem organizações internacionais que regulamentam o esporte e promovem campeonatos de prestígio, como a Associação Mundial de Boxe (WBA), o Conselho Mundial de Boxe (WBC) e a Federação Internacional de Boxe (IBF). Além da competição profissional, o boxe também é praticado como forma de exercício físico, defesa pessoal e disciplina mental. Muitos academias e clubes oferecem aulas para iniciantes, visando não apenas o condicionamento físico, mas também o desenvolvimento da autoconfiança e disciplina. Apesar de sua popularidade, o boxe também é um esporte controverso devido aos riscos associados às lesões cerebrais traumáticas decorrentes dos golpes na cabeça. Essa preocupação levou a diversas medidas de segurança e regulamentações para proteger a saúde dos atletas, como exames médicos rigorosos e regras específicas sobre golpes permitidos. Em resumo, o boxe é um esporte emocionante e desafiador que exige habilidade técnica, condicionamento físico e coragem dos seus praticantes. Ao longo dos anos, tem sido uma fonte de inspiração para muitos e continua a ser um dos esportes mais assistidos e praticados em todo o mundo.",
-          "imagem" => "./imagens/boxe.jpg",
-          "href" => ""
-      );
-      $listaNoticia[1] = array(
-          "titulo" => "BOXE",
-          "descricao" => "O boxe é um esporte de combate que envolve o uso dos punhos para atacar e se defender. Tem origens antigas, remontando a civilizações como os sumérios e egípcios, mas sua forma moderna se desenvolveu no século XVIII na Inglaterra. O esporte se popularizou ao redor do mundo e é caracterizado pela sua combinação de técnica, força física, estratégia e condicionamento. Os competidores, chamados de pugilistas ou boxeadores, enfrentam-se em um ringue dividido em quadrados e delimitado por cordas. As lutas são divididas em rounds, com duração específica, e são supervisionadas por um árbitro. O objetivo é acertar o oponente com golpes limpos e válidos, enquanto se esquiva e se defende dos ataques recebidos. O boxe moderno é categorizado em diversas classes de peso, desde pesos mosca até pesos pesados, o que permite a participação de atletas de diferentes estaturas e pesos. Existem organizações internacionais que regulamentam o esporte e promovem campeonatos de prestígio, como a Associação Mundial de Boxe (WBA), o Conselho Mundial de Boxe (WBC) e a Federação Internacional de Boxe (IBF). Além da competição profissional, o boxe também é praticado como forma de exercício físico, defesa pessoal e disciplina mental. Muitos academias e clubes oferecem aulas para iniciantes, visando não apenas o condicionamento físico, mas também o desenvolvimento da autoconfiança e disciplina. Apesar de sua popularidade, o boxe também é um esporte controverso devido aos riscos associados às lesões cerebrais traumáticas decorrentes dos golpes na cabeça. Essa preocupação levou a diversas medidas de segurança e regulamentações para proteger a saúde dos atletas, como exames médicos rigorosos e regras específicas sobre golpes permitidos. Em resumo, o boxe é um esporte emocionante e desafiador que exige habilidade técnica, condicionamento físico e coragem dos seus praticantes. Ao longo dos anos, tem sido uma fonte de inspiração para muitos e continua a ser um dos esportes mais assistidos e praticados em todo o mundo.",
-          "imagem" => "./imagens/boxe.jpg",
-          "href" => ""
-      );
-      $listaNoticia[2] = array(
-          "titulo" => "BOXE",
-          "descricao" => "O boxe é um esporte de combate que envolve o uso dos punhos para atacar e se defender. Tem origens antigas, remontando a civilizações como os sumérios e egípcios, mas sua forma moderna se desenvolveu no século XVIII na Inglaterra. O esporte se popularizou ao redor do mundo e é caracterizado pela sua combinação de técnica, força física, estratégia e condicionamento. Os competidores, chamados de pugilistas ou boxeadores, enfrentam-se em um ringue dividido em quadrados e delimitado por cordas. As lutas são divididas em rounds, com duração específica, e são supervisionadas por um árbitro. O objetivo é acertar o oponente com golpes limpos e válidos, enquanto se esquiva e se defende dos ataques recebidos. O boxe moderno é categorizado em diversas classes de peso, desde pesos mosca até pesos pesados, o que permite a participação de atletas de diferentes estaturas e pesos. Existem organizações internacionais que regulamentam o esporte e promovem campeonatos de prestígio, como a Associação Mundial de Boxe (WBA), o Conselho Mundial de Boxe (WBC) e a Federação Internacional de Boxe (IBF). Além da competição profissional, o boxe também é praticado como forma de exercício físico, defesa pessoal e disciplina mental. Muitos academias e clubes oferecem aulas para iniciantes, visando não apenas o condicionamento físico, mas também o desenvolvimento da autoconfiança e disciplina. Apesar de sua popularidade, o boxe também é um esporte controverso devido aos riscos associados às lesões cerebrais traumáticas decorrentes dos golpes na cabeça. Essa preocupação levou a diversas medidas de segurança e regulamentações para proteger a saúde dos atletas, como exames médicos rigorosos e regras específicas sobre golpes permitidos. Em resumo, o boxe é um esporte emocionante e desafiador que exige habilidade técnica, condicionamento físico e coragem dos seus praticantes. Ao longo dos anos, tem sido uma fonte de inspiração para muitos e continua a ser um dos esportes mais assistidos e praticados em todo o mundo.",
-          "imagem" => "./imagens/boxe.jpg",
-          "href" => ""
-      );
-      $listaNoticia[3] = array(
-          "titulo" => "BOXE",
-          "descricao" => "O boxe é um esporte de combate que envolve o uso dos punhos para atacar e se defender. Tem origens antigas, remontando a civilizações como os sumérios e egípcios, mas sua forma moderna se desenvolveu no século XVIII na Inglaterra. O esporte se popularizou ao redor do mundo e é caracterizado pela sua combinação de técnica, força física, estratégia e condicionamento. Os competidores, chamados de pugilistas ou boxeadores, enfrentam-se em um ringue dividido em quadrados e delimitado por cordas. As lutas são divididas em rounds, com duração específica, e são supervisionadas por um árbitro. O objetivo é acertar o oponente com golpes limpos e válidos, enquanto se esquiva e se defende dos ataques recebidos. O boxe moderno é categorizado em diversas classes de peso, desde pesos mosca até pesos pesados, o que permite a participação de atletas de diferentes estaturas e pesos. Existem organizações internacionais que regulamentam o esporte e promovem campeonatos de prestígio, como a Associação Mundial de Boxe (WBA), o Conselho Mundial de Boxe (WBC) e a Federação Internacional de Boxe (IBF). Além da competição profissional, o boxe também é praticado como forma de exercício físico, defesa pessoal e disciplina mental. Muitos academias e clubes oferecem aulas para iniciantes, visando não apenas o condicionamento físico, mas também o desenvolvimento da autoconfiança e disciplina. Apesar de sua popularidade, o boxe também é um esporte controverso devido aos riscos associados às lesões cerebrais traumáticas decorrentes dos golpes na cabeça. Essa preocupação levou a diversas medidas de segurança e regulamentações para proteger a saúde dos atletas, como exames médicos rigorosos e regras específicas sobre golpes permitidos. Em resumo, o boxe é um esporte emocionante e desafiador que exige habilidade técnica, condicionamento físico e coragem dos seus praticantes. Ao longo dos anos, tem sido uma fonte de inspiração para muitos e continua a ser um dos esportes mais assistidos e praticados em todo o mundo.",
-          "imagem" => "./imagens/boxe.jpg",
-          "href" => ""
-      );
-      $listaNoticia[4] = array(
-          "titulo" => "BOXE",
-          "descricao" => "O boxe é um esporte de combate que envolve o uso dos punhos para atacar e se defender. Tem origens antigas, remontando a civilizações como os sumérios e egípcios, mas sua forma moderna se desenvolveu no século XVIII na Inglaterra. O esporte se popularizou ao redor do mundo e é caracterizado pela sua combinação de técnica, força física, estratégia e condicionamento. Os competidores, chamados de pugilistas ou boxeadores, enfrentam-se em um ringue dividido em quadrados e delimitado por cordas. As lutas são divididas em rounds, com duração específica, e são supervisionadas por um árbitro. O objetivo é acertar o oponente com golpes limpos e válidos, enquanto se esquiva e se defende dos ataques recebidos. O boxe moderno é categorizado em diversas classes de peso, desde pesos mosca até pesos pesados, o que permite a participação de atletas de diferentes estaturas e pesos. Existem organizações internacionais que regulamentam o esporte e promovem campeonatos de prestígio, como a Associação Mundial de Boxe (WBA), o Conselho Mundial de Boxe (WBC) e a Federação Internacional de Boxe (IBF). Além da competição profissional, o boxe também é praticado como forma de exercício físico, defesa pessoal e disciplina mental. Muitos academias e clubes oferecem aulas para iniciantes, visando não apenas o condicionamento físico, mas também o desenvolvimento da autoconfiança e disciplina. Apesar de sua popularidade, o boxe também é um esporte controverso devido aos riscos associados às lesões cerebrais traumáticas decorrentes dos golpes na cabeça. Essa preocupação levou a diversas medidas de segurança e regulamentações para proteger a saúde dos atletas, como exames médicos rigorosos e regras específicas sobre golpes permitidos. Em resumo, o boxe é um esporte emocionante e desafiador que exige habilidade técnica, condicionamento físico e coragem dos seus praticantes. Ao longo dos anos, tem sido uma fonte de inspiração para muitos e continua a ser um dos esportes mais assistidos e praticados em todo o mundo.",
-          "imagem" => "./imagens/boxe.jpg",
-          "href" => ""
-      );
-      return $listaNoticia;
-  }
-
   function calcularImc($peso, $altura){
     $resposta = 0;
     if($peso && $altura){
@@ -146,22 +108,6 @@ function reduzirStr($str,$quantidade){
         return ($result)?true:false;
     }
 
-  function cadastrarRegistro($nome,$email,$telefone,$login,$senha)
-    {
-        if(!$nome || !$email || !$telefone || !$login || !$senha){return;}
-        $sql = "INSERT INTO `registro` (`nome`,`email`,`telefone`,`login`,`senha`)
-        VALUES(:nome,:email,:telefone,:login,:senha)";
-
-        $pdo = Database::conexao();
-        $stmt = $pdo->prepare($sql);
-        $stmt->bindParam(':nome', $nome);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':telefone', $telefone);
-        $stmt->bindParam(':login', $login);
-        $stmt->bindParam(':senha', $senha);
-        $result = $stmt->execute();
-        return ($result)?true:false;
-    }
 
     function cadastrarContato($nome,$sobrenome,$email,$telefone,$mensagem)
     {
@@ -216,12 +162,12 @@ function reduzirStr($str,$quantidade){
         return $list;
     }
 
-    function cadastrarNoticia($titulo,$img,$descricao,$descricao_curta)
+    function cadastrarNoticia($titulo,$img,$descricao,$descricao_curta,$id_categoria)
     {
-        if(!$titulo ||!$img || !$descricao || !$descricao_curta){return;}
+        if(!$titulo ||!$img || !$descricao || !$descricao_curta || !$id_categoria){return;}
         // var_dump($titulo,$img,$descricao,$descricao_curta);die;
-        $sql = "INSERT INTO `noticias` (`titulo`,`img`,`descricao`,`descricao_curta`)
-        VALUES(:titulo,:img,:descricao,:descricao_curta)";
+        $sql = "INSERT INTO `noticias` (`titulo`,`img`,`descricao`,`descricao_curta`, `id_categoria`)
+        VALUES(:titulo,:img,:descricao,:descricao_curta,:id_categoria)";
 
         $pdo = Database::conexao();
         $stmt = $pdo->prepare($sql);
@@ -229,42 +175,11 @@ function reduzirStr($str,$quantidade){
         $stmt->bindParam(':img', $img);
         $stmt->bindParam(':descricao', $descricao);
         $stmt->bindParam(':descricao_curta', $descricao_curta);
+        $stmt->bindParam(':id_categoria', $id_categoria);
         $result = $stmt->execute();
         return ($result)?true:false;
     }
 
- function verificarLogin($login){
-    $pdo = Database::conexao();
-    $sql = "SELECT `id`, `nome`, `login`, `senha` FROM registro WHERE `login` = '$login'";
-    $stmt = $pdo->prepare($sql);
-    $list = $stmt->execute();
-    $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    return @$list[0];
- }
-
- function validaSenha($senhaDigitada, $senhaBd){
-    if(!$senhaDigitada || !$senhaBd){return false;}
-    if($senhaDigitada == $senhaBd){return true;}
-    return false; 
- }
-
- function protegerTela(){
-    if(!$_SESSION || !$_SESSION["usuario"]["status"] === 'logado'){
-        header('Location:'.constant("URL_LOCAL_SITE_PAGINA_LOGIN"));
-    }
- }
-function registrarAcessoValido($usuarioCadastrado){
-    $_SESSION["usuario"]["nome"] = $usuarioCadastrado['nome'];
-    $_SESSION["usuario"]["id"] = $usuarioCadastrado['id']; 
-    $_SESSION["usuario"]["status"] = 'logado';
-
-    
-}
-
-function limparSessao(){
-    unset($_SESSION["usuario"]);
-    header('Location:'.constant("URL_LOCAL_SITE_PAGINA_LOGIN"));
-}
 
 function buscarNoticiaPorId($id)
 {
@@ -288,3 +203,99 @@ function procurarNoticiaPorLike($titulo){
     return $result;
 
 }
+
+function cadastrarCategoria($nomeCategoria)
+{
+    if(!$nomeCategoria){return;}
+    $sql = "INSERT INTO `categoria` (`nome_categoria`) VALUES(:nome)";
+    $pdo = Database::conexao();
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':nome', $nomeCategoria);
+    $result= $stmt->execute();
+    return($result)?true:false;
+
+}
+ function verificarCategoriaDuplicada($termo){
+   
+    $pdo = Database::conexao();
+    $sql =  "SELECT * FROM `categoria` WHERE `nome_categoria` = '$termo'";
+    $stmt = $pdo->prepare($sql);
+    $list = $stmt->execute();
+    $list =  $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return($list)?true:false;
+}
+
+ function listarCategorias(){
+    $pdo = Database::conexao();
+    $sql = "SELECT * FROM categoria";
+    $stmt = $pdo->prepare($sql);
+    $list = $stmt->execute();
+    $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $list;
+}
+
+function listarNoticiasPorCategoria($idCategoria){
+    $pdo = Database::conexao();
+    $sql = "SELECT * FROM noticia WHERE `id_categoria` = $idCategoria LIMIT 3;";
+    $stmt = $pdo->prepare($sql);
+    $list = $stmt->execute();
+    $list = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $list;
+}
+ 
+function gerarNumerosRandomicos(){
+    return date('Y').date('m').date('d').date("h").date(':i').'-'.date('sa').rand();
+  }
+  function upload($imagem){
+    if(!@$_FILES["fileToUpload"]){return;}
+
+    $target_dir = "assets/uploads/";
+    $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["submit"])){
+        $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+    }
+
+    // Check if file already exists
+    if (file_exists($target_file)) {
+        echo "Sorry, file already exists.";
+        $uploadOk = 0;
+    }
+
+    // Check file size
+    if ($_FILES["fileToUpload"]["size"] > 900000) {
+        echo "Sorry, your file is too large.";
+        $uploadOk = 0;
+    }
+
+    // Allow certain file formats
+    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+        && $imageFileType != "gif" ) {
+        echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+        $uploadOk = 0;
+    }
+
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+            // echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+            return $_FILES["fileToUpload"]["name"];
+        } else {
+            // echo "Sorry, there was an error uploading your file.";
+            return false;
+        }
+    }
+  }

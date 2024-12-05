@@ -25,36 +25,16 @@
                     <h2>Cadastrar nova notícia</h2>
                 </div>
                 
-                <form method="POST" action="#" .+enctype="multipart/form-data">
+                <form method="POST" action="#">
                     <div class="campos">
                         <div class="input-box">
                             <div class="name">
-                                <label for="titulo"></label>
-                                <input type="text" placeholder="Título" id="titulo" name="titulo" >
+                                <label for="nome"></label>
+                                <input type="text" placeholder="Digite a categoria" id="nome" name="nomeCategoria" >
                                 <p id="nome-ajuda" class="msg-ajuda" style="display:none;">Mín. 3 caracteres</p>
                             </div>
                         </div>
-                        
-                        <div class="input-box">
-                            <input type="text" id="imagem" name="descricao_curta" placeholder="Digite a descrição curta">
-                        </div>
-
-                        <div class="input-box">
-                            <input type="file" name="fileToUpload" id="fileToUpload">
-                        </div>
-                        
-                        <div class="input-box">
-                            <textarea id="mensagem" name="descricao" placeholder="Digite a descrição"></textarea>
-                        </div>
-
-                            <select name="nome_categoria" class="name">
-                                <?php foreach ($categorias as $itemCategoria):?>
-                                    <option value=<?=$itemCategoria['id']?>><?=$itemCategoria['nome_categoria']?></option>
-                                <?php endforeach;?>
-                            </select>
-                          
                     </div>
-
                     <div class="button">
                         <button value="Enviar" class="btn-concluir" id="btnEnviar">Enviar</button>
                     </div>
@@ -64,7 +44,6 @@
                 <h2>Notícias</h2>
             </section>
         </div>
-
         <footer class="footer">
             <span>InfoSports</span>
             <a href="#backToTop" class="footerAnchor">VOLTAR PARA O TOPO</a>

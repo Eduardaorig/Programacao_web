@@ -1,6 +1,7 @@
 <?php
 include_once("configuracao.php");
 include_once("configuracao/conexao.php");
+include_once("model/acesso_model.php");
 include_once("funcoes.php");
 
 $nome = ($_SERVER["REQUEST_METHOD"] == "POST"
@@ -39,20 +40,27 @@ $descricao = ($_SERVER["REQUEST_METHOD"] == "POST"
 $descricao_curta = ($_SERVER["REQUEST_METHOD"] == "POST"
 && !empty($_POST['descricao_curta'])) ? $_POST['descricao_curta'] : null;
 
-$imagem = ($_SERVER["REQUEST_METHOD"] == "POST"
-&& !empty($_POST['imagem'])) ? $_POST['imagem'] : null;
+$nomeCategoria = ($_SERVER["REQUEST_METHOD"] == "POST"
+&& !empty($_POST['nomeCategoria'])) ? $_POST['nomeCategoria'] : null;
+
+$imagem = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['fileToUpload'])) ? $_POST['fileToUpload'] : null;
+
+$id_categoria = ($_SERVER["REQUEST_METHOD"] == "POST" && !empty($_POST['nome_categoria'])) ? $_POST['nome_categoria'] : null;
+
 $resposta = 0;
- 
+
  $resposta = calcularImc($peso, $altura);
  $classificacao = classificarImc($resposta);
  $noticia = null;
+ $categorias = [];
+ $noticiasPorCategoria = [];
+
  
-//  var_dump($resposta); 
  timeZone();
   $data = dataAtual();
   $tituloDoSite = "BEM VINDO A INFOSPORTS!";
   $subTituloDoSite = "Aqui é onde você encontra todos os itens mais novos e modernos do seu esporte
-  preferido. <br>".$data;
+  preferido. <br>";
 
 if($_GET && isset($_GET['pagina'])){
   $paginaUrl = $_GET['pagina'];
@@ -62,13 +70,15 @@ if($_GET && isset($_GET['pagina'])){
 
 if($paginaUrl === "principal"){
   cadastrar($nome,$email,$peso,$altura,$resposta,$classificacao);
-}elseif($paginaUrl === "registro"){
-  cadastrarRegistro($nome, $email, $telefone,$login,$senha);
 }elseif($paginaUrl === "contato"){
   cadastrarContato($nome,$sobrenome,$email,$telefone,$mensagem);
-}elseif($paginaUrl === "cadastrar-noticia"){
-  cadastrarNoticia($titulo,$imagem,$descricao,$descricao_curta);
-}
+}elseif($paginaUrl === "noticia"){
+  $nomedaImagem = upload($imagem);
+  cadastrarNoticia($titulo,$nomedaImagem,$descricao,$descricao_curta, $id_categoria);
+}elseif($paginaUrl === "categoria"){
+  if(!verificarCategoriaDuplicada($nomeCategoria)){
+    cadastrarCategoria($nomeCategoria);
+}}
 
 include_once("views/header_view.php");
   if($paginaUrl === "principal"){
@@ -76,24 +86,32 @@ include_once("views/header_view.php");
   }elseif($paginaUrl === "contato"){
     include_once("views/contato_view.php");
   }elseif($paginaUrl === "login"){
-    include_once("views/login_view.php");
-
-    $usuarioCadastrado = verificarLogin($login);
-    if($usuarioCadastrado && validaSenha($senha, $usuarioCadastrado['senha'])   
+    
+    $usuarioCadastrado = acesso::verificarLogin($login);
+    if($usuarioCadastrado && acesso::validaSenha($senha, $usuarioCadastrado['senha'])   
     ){
-      registrarAcessoValido($usuarioCadastrado);
-
+    acesso::registrarAcessoValido($usuarioCadastrado);
+      
     }
 
+  include_once("views/login_view.php");
     
   }elseif($paginaUrl === "registro"){
-      protegerTela();
-    include_once("views/registro_view.php");
-  }elseif($paginaUrl === "cadastrar-noticia"){
-      protegerTela();
-    include_once("views/noticia_view.php");
+      acesso::protegerTela();
+      include_once("model/registro_model.php");
+      $usuarioCadastrado = Registro::verificarLogin($login);
+      include_once("controller/registro_controller.php");
+  }elseif($paginaUrl === "noticia"){
+      var_dump($_POST);die;
+      acesso::protegerTela();
+      $categorias = listarCategorias();
+      $nomedaImagem = upload($imagem);
+      include_once("views/noticia_view.php");
   }elseif($paginaUrl === "sair"){
-    limparSessao();
+      acesso::limparSessao();
+  }elseif($paginaUrl === "categoria"){
+      acesso::protegerTela();
+    include_once("views/categoria_view.php");
   }elseif($paginaUrl === "detalhe"){
     if($_GET && isset($_GET['id'])){
       $idNoticia = $_GET['id'];
@@ -101,9 +119,9 @@ include_once("views/header_view.php");
       $idNoticia = 0;
     }
     $noticia = buscarNoticiaPorId($idNoticia);
+    $noticiasPorCategoria = listarNoticiasPorCategoria($noticia['categoria_id']);
     include_once("views/detalhe_view.php");
-  }
-  else{
+  }else{
     echo "404 Página não existe!";
   }
 

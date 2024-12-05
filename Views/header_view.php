@@ -26,7 +26,10 @@
     <?php if($paginaUrl === "detalhe"):?>
         <link rel="stylesheet" href="css/paginas.css">
     <?php endif; ?>
-    <?php if($paginaUrl === "cadastrar-noticia"):?>
+     <?php if($paginaUrl === "categoria" ):?>
+        <link rel="stylesheet" href="css/contato.css">
+    <?php endif; ?>
+     <?php if($paginaUrl === "noticia" ):?>
         <link rel="stylesheet" href="css/contato.css">
     <?php endif; ?>
 
